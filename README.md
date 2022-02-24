@@ -1,16 +1,8 @@
-# {project}
-
-Executing the program can either be done via
+The following does not work
 ```
-clj -M -m scratch :arg1 :arg2
+clj -T:build uber
 ```
-or by compiling a jar via
+the following works
 ```
-clj -T:build clean
-clj -T:build jar
+cd subproject && clj -T:build uber
 ```
-and executing it via
-```
-java -jar target/lib-0.1.4.jar :arg1 :arg2
-```
-## License
